@@ -1,0 +1,4 @@
+repository "UI_GUI_Study@tj_lai_chi@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
