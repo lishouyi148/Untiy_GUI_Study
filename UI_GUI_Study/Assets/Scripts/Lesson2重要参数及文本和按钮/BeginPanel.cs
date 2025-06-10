@@ -4,8 +4,24 @@ using System.Reflection.Emit;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Exercise : MonoBehaviour
+public class BeginPanel : MonoBehaviour
 {
+    private static BeginPanel instance;
+    public static void ShowMe()
+    {
+        if (instance != null)
+        {
+            instance.gameObject.SetActive(true);
+        }
+    }
+
+    public static void HideMe()
+    {
+        if (instance != null)
+        {
+            instance.gameObject.SetActive(false);
+        }
+    }
     public Rect labRect;
     public GUIContent labContent;
     public GUIStyle labStyle;
@@ -15,6 +31,12 @@ public class Exercise : MonoBehaviour
     public Rect butRect_Exc;
 
     public GUIStyle butstyle;
+
+    public void Awake()
+    {
+        instance = this;
+        ShowMe();
+    }
 
     private void OnGUI()
     {
@@ -33,7 +55,9 @@ public class Exercise : MonoBehaviour
 
         if (GUI.Button(butRect_Exc, "…Ë÷√", butstyle))
         {
-
+            HideMe();
+            BeginPanel.HideMe();
+            SettingPanel.ShowMe();
         }
     }
 }
