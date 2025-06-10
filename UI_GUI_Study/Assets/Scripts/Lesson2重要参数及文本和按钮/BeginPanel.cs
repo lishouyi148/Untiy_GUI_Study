@@ -45,7 +45,8 @@ public class BeginPanel : MonoBehaviour
         //点击开始游戏切换场景
         if (GUI.Button(butRect_GameBegin, "游戏开始", butstyle))
         {
-            SceneManager.LoadScene("GameScene");
+            BeginPanel.HideMe();
+            LogPanel.ShowMe();
         }
          
         if (GUI.Button(butRect_GameEnd, "退出游戏", butstyle))
