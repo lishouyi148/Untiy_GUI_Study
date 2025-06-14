@@ -21,28 +21,34 @@ public class SettingPanel : MonoBehaviour
         }
     }
 
-    //Rect
+    //title
     public Rect titleLabelRect;
+
+    public GUIContent titleContent;
+
+    public GUIStyle titleStyle;
+
+    //Toogle
     public Rect musicToggleRect;
     public Rect soundEffectsToggleRect;
-    public Rect confirmButtonRect;
     public Rect musicVolumeRect;
     public Rect soundVolumeRect;
 
-    //Content
-    public GUIContent titleContent;
-
-    //多选框选中状态
     public bool isSel_music = true;
     public bool isSel_soundEffects = true;
 
-    //style
-    public GUIStyle titleStyle;
-    public GUIStyle confirmButtonStyle;
-
-    //音乐大小
     public float nowMusicVolumeValue = 0.5f;
     public float nowSoundVolumeValue = 0.5f;
+
+    //Button
+    public Rect confirmButtonRect;
+
+    public GUIStyle confirmButtonStyle;
+
+    //Texture
+    public Rect backGroundTextureRect;
+
+    public Texture backGroundTexture;
 
     public void Awake()
     {
@@ -51,6 +57,8 @@ public class SettingPanel : MonoBehaviour
     }
     private void OnGUI()
     {
+        GUI.DrawTexture(backGroundTextureRect, backGroundTexture);
+
         GUI.Label(titleLabelRect, titleContent, titleStyle);
 
         isSel_music = GUI.Toggle(musicToggleRect, isSel_music, "音乐开关");

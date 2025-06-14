@@ -22,22 +22,28 @@ public class LogPanel : MonoBehaviour
         }
     }
 
-    //Rect
+    //title
     public Rect titleLabelRect;
+    public GUIStyle titleStyle;
+
+    //InputField
     public Rect usernameInputFieldRect;
     public Rect passwordInputFieldRect;
+
+    public string usernameStr;
+    public string passwordStr;
+
+    //Button
     public Rect confirmButtonRect;
     public Rect backButtonRect;
 
-    //Content
-
-    //Style
-    public GUIStyle titleStyle;
     public GUIStyle confirmButtonStyle;
 
-    // ‰»ÎøÚ ‰»Îƒ⁄»›
-    public string usernameStr;
-    public string passwordStr;
+    //Texture
+    public Rect backGroundTextureRect;
+
+    public Texture backGroundTexture;
+
 
     public void Awake()
     {
@@ -46,6 +52,8 @@ public class LogPanel : MonoBehaviour
     }
     private void OnGUI()
     {
+        GUI.DrawTexture(backGroundTextureRect, backGroundTexture);
+
         GUI.Label(titleLabelRect, "«Îµ«¬º", titleStyle);
 
         usernameStr = GUI.TextField(usernameInputFieldRect, usernameStr);

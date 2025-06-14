@@ -157,42 +157,10 @@ MonoBehaviour:
     y: 50
     width: 200
     height: 30
-  musicToggleRect:
-    serializedVersion: 2
-    x: 300
-    y: 150
-    width: 100
-    height: 30
-  soundEffectsToggleRect:
-    serializedVersion: 2
-    x: 300
-    y: 250
-    width: 100
-    height: 30
-  confirmButtonRect:
-    serializedVersion: 2
-    x: 300
-    y: 300
-    width: 40
-    height: 40
-  musicVolumeRect:
-    serializedVersion: 2
-    x: 400
-    y: 155
-    width: 100
-    height: 20
-  soundVolumeRect:
-    serializedVersion: 2
-    x: 400
-    y: 255
-    width: 100
-    height: 20
   titleContent:
     m_Text: "\u6E38\u620F\u8BBE\u7F6E"
     m_Image: {fileID: 0}
     m_Tooltip: 
-  isSel_music: 1
-  isSel_soundEffects: 1
   titleStyle:
     m_Name: 
     m_Normal:
@@ -260,6 +228,40 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+  musicToggleRect:
+    serializedVersion: 2
+    x: 300
+    y: 150
+    width: 100
+    height: 30
+  soundEffectsToggleRect:
+    serializedVersion: 2
+    x: 300
+    y: 250
+    width: 100
+    height: 30
+  musicVolumeRect:
+    serializedVersion: 2
+    x: 400
+    y: 155
+    width: 100
+    height: 20
+  soundVolumeRect:
+    serializedVersion: 2
+    x: 400
+    y: 255
+    width: 100
+    height: 20
+  isSel_music: 1
+  isSel_soundEffects: 1
+  nowMusicVolumeValue: 1
+  nowSoundVolumeValue: 0.8331826
+  confirmButtonRect:
+    serializedVersion: 2
+    x: 300
+    y: 300
+    width: 40
+    height: 40
   confirmButtonStyle:
     m_Name: 
     m_Normal:
@@ -327,8 +329,13 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  nowMusicVolumeValue: 1
-  nowSoundVolumeValue: 0.5
+  backGroundTextureRect:
+    serializedVersion: 2
+    x: 200
+    y: 10
+    width: 400
+    height: 400
+  backGroundTexture: {fileID: 2800000, guid: 5d903bb44ddff304daaba2e6516060a1, type: 3}
 --- !u!4 &232227545
 Transform:
   m_ObjectHideFlags: 0
@@ -336,6 +343,77 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232227543}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &590141087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 590141089}
+  - component: {fileID: 590141088}
+  m_Layer: 0
+  m_Name: TestPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &590141088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590141087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82c4b8c75012c5c47a91475df7412632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolbarRect:
+    serializedVersion: 2
+    x: 100
+    y: 0
+    width: 200
+    height: 30
+  selectGirdRect:
+    serializedVersion: 2
+    x: 50
+    y: 30
+    width: 50
+    height: 150
+  toolbarInfos:
+  - "\u5F3A\u5316"
+  - "\u89E3\u68A6"
+  - "\u5E7B\u5316"
+  toolbarIndex: 0
+  selectGirdCount: 1
+  labelRect:
+    serializedVersion: 2
+    x: 120
+    y: 40
+    width: 100
+    height: 100
+  labelText1: "\u5F3A\u5316\u6B66\u5668"
+  labelText2: "\u89E3\u68A6\u6B66\u5668"
+  labelText3: "\u5E7B\u5316\u6B66\u5668"
+--- !u!4 &590141089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590141087}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -565,30 +643,6 @@ MonoBehaviour:
     y: 50
     width: 100
     height: 50
-  usernameInputFieldRect:
-    serializedVersion: 2
-    x: 300
-    y: 150
-    width: 100
-    height: 30
-  passwordInputFieldRect:
-    serializedVersion: 2
-    x: 300
-    y: 200
-    width: 100
-    height: 30
-  confirmButtonRect:
-    serializedVersion: 2
-    x: 300
-    y: 250
-    width: 100
-    height: 30
-  backButtonRect:
-    serializedVersion: 2
-    x: 300
-    y: 300
-    width: 100
-    height: 30
   titleStyle:
     m_Name: 
     m_Normal:
@@ -656,6 +710,32 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+  usernameInputFieldRect:
+    serializedVersion: 2
+    x: 300
+    y: 150
+    width: 100
+    height: 30
+  passwordInputFieldRect:
+    serializedVersion: 2
+    x: 300
+    y: 200
+    width: 100
+    height: 30
+  usernameStr: 
+  passwordStr: 
+  confirmButtonRect:
+    serializedVersion: 2
+    x: 300
+    y: 250
+    width: 100
+    height: 30
+  backButtonRect:
+    serializedVersion: 2
+    x: 300
+    y: 300
+    width: 100
+    height: 30
   confirmButtonStyle:
     m_Name: 
     m_Normal:
@@ -723,8 +803,13 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  usernameStr: 
-  passwordStr: 
+  backGroundTextureRect:
+    serializedVersion: 2
+    x: 180
+    y: 0
+    width: 400
+    height: 400
+  backGroundTexture: {fileID: 2800000, guid: 5d903bb44ddff304daaba2e6516060a1, type: 3}
 --- !u!4 &1119701362
 Transform:
   m_ObjectHideFlags: 0
@@ -732,6 +817,74 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119701360}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1616969606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1616969608}
+  - component: {fileID: 1616969607}
+  m_Layer: 0
+  m_Name: QuitTipPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1616969607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616969606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cee5becf9c19cc478fd2ef11767daa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clientRect:
+    serializedVersion: 2
+    x: 300
+    y: 50
+    width: 200
+    height: 150
+  cliButton_Exit:
+    serializedVersion: 2
+    x: 30
+    y: 50
+    width: 60
+    height: 50
+  cliButton_Cancel:
+    serializedVersion: 2
+    x: 100
+    y: 50
+    width: 60
+    height: 50
+  cliLabel:
+    serializedVersion: 2
+    x: 80
+    y: 20
+    width: 100
+    height: 20
+--- !u!4 &1616969608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616969606}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -846,25 +999,25 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  butRect_GameBegin:
+  buttonRect_GameBegin:
     serializedVersion: 2
-    x: 350
+    x: 380
     y: 150
-    width: 200
-    height: 50
-  butRect_GameEnd:
+    width: 270
+    height: 60
+  buttonRect_GameEnd:
     serializedVersion: 2
-    x: 350
+    x: 380
     y: 220
-    width: 200
-    height: 50
-  butRect_Exc:
+    width: 270
+    height: 60
+  buttonRect_Exc:
     serializedVersion: 2
-    x: 350
+    x: 380
     y: 290
-    width: 200
-    height: 50
-  butstyle:
+    width: 270
+    height: 60
+  buttonstyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 2800000, guid: da33c1b3e231cc548b54a30d9a2e89cb, type: 3}
@@ -918,8 +1071,8 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_Font: {fileID: 0}
+    m_FontSize: 30
     m_FontStyle: 0
     m_Alignment: 4
     m_WordWrap: 0
@@ -931,6 +1084,13 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+  backGroundTextureRect:
+    serializedVersion: 2
+    x: 240
+    y: 10
+    width: 530
+    height: 400
+  backGroundTexture: {fileID: 2800000, guid: 5d903bb44ddff304daaba2e6516060a1, type: 3}
 --- !u!4 &2061857881
 Transform:
   m_ObjectHideFlags: 0
@@ -939,6 +1099,38 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061857879}
   serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2137815593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2137815594}
+  - component: {fileID: 2137815595}
+  m_Layer: 0
+  m_Name: ScrollViewTestPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2137815594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137815593}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -946,12 +1138,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2137815595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137815593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d70b28b73de034da28a9eb21062f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 100
+    height: 50
+  showRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 200
+    height: 120
+  strs:
+  - "\u674E\u6536\u61FF"
+  - "\u674E\u6536\u61FF"
+  - "\u674E\u6536\u61FF"
+  - "\u674E\u6536\u61FF"
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 963194228}
   - {fileID: 705507995}
-  - {fileID: 2061857881}
   - {fileID: 232227545}
+  - {fileID: 2061857881}
   - {fileID: 1119701362}
+  - {fileID: 590141089}
+  - {fileID: 2137815594}
+  - {fileID: 1616969608}

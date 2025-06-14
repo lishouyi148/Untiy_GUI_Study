@@ -22,15 +22,25 @@ public class BeginPanel : MonoBehaviour
             instance.gameObject.SetActive(false);
         }
     }
+
+    //title
     public Rect labRect;
     public GUIContent labContent;
     public GUIStyle labStyle;
 
-    public Rect butRect_GameBegin;
-    public Rect butRect_GameEnd;
-    public Rect butRect_Exc;
+    //button
+    public Rect buttonRect_GameBegin;
+    public Rect buttonRect_GameEnd;
+    public Rect buttonRect_Exc;
 
-    public GUIStyle butstyle;
+    public GUIStyle buttonstyle;
+
+    //Texture
+    public Rect backGroundTextureRect;
+
+    public Texture backGroundTexture;
+
+   
 
     public void Awake()
     {
@@ -40,21 +50,24 @@ public class BeginPanel : MonoBehaviour
 
     private void OnGUI()
     {
+        GUI.DrawTexture(backGroundTextureRect, backGroundTexture);
+
         GUI.Label(labRect, labContent, labStyle);
 
         //点击开始游戏切换场景
-        if (GUI.Button(butRect_GameBegin, "游戏开始", butstyle))
+        if (GUI.Button(buttonRect_GameBegin, "开始游戏", buttonstyle))
         {
             BeginPanel.HideMe();
             LogPanel.ShowMe();
         }
          
-        if (GUI.Button(butRect_GameEnd, "退出游戏", butstyle))
+        if (GUI.Button(buttonRect_GameEnd, "退出游戏", buttonstyle))
         {
-
+            QuitTipPanel.ShowMe();
+            BeginPanel.HideMe();
         }
 
-        if (GUI.Button(butRect_Exc, "设置", butstyle))
+        if (GUI.Button(buttonRect_Exc, "设置", buttonstyle))
         {
             HideMe();
             BeginPanel.HideMe();
